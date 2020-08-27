@@ -1,6 +1,6 @@
 {
-  "name": "reactmath",
-  "homepage": "https://yongjinjiang.github.io/reactmath",
+  "name": "mathslides",
+  "homepage": "https://yongjinjiang.github.io/mathslides",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,8 @@
     "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "spectacle": "^6.2.0"
   },
   "scripts": {
     "predeploy": "npm run build",
