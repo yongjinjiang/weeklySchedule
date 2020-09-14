@@ -1,4 +1,6 @@
 import React from 'react';
+import Game1 from './Game1';
+import {Table} from './tablePlaceValue'; 
 // import { Deck, Slide, Heading } from 'spectacle';
 
 import {
@@ -56,19 +58,23 @@ const template = () => (
 var smallfont = 20;
 var mediumfont = 30;
 
+
+
+
+
 function App() {
   return (
     <Deck theme={theme} template={template} transitionEffect="fade">
-      <Slide>
+      {/* <Slide>
         <Heading>Welcome to Spectacle</Heading>
       </Slide>
       <Slide>
         <Heading>Welcome to Spectacle2</Heading>
-      </Slide>
+      </Slide> */}
 
 
 
-      <Slide>
+      {/* <Slide>
    
    <FlexBox>
    <Appear elementNum={-1}>
@@ -110,8 +116,40 @@ function App() {
      </Notes>
    </Slide>
 
+<Slide>
+  <Game1  />
+ </Slide> */}
 
-    </Deck>
+
+ <Slide>
+
+    <Table />
+  
+ </Slide>
+
+
+ <Slide>
+
+<Table />
+
+</Slide>
+
+<Slide>
+<span style={{color:"white", fontSize:"60px"}}>Let's practise</span>
+<span style={{color:"#f542f5", fontSize:"55px"}}>4th grade</span>
+<a href="https://www.ixl.com/math/grade-4/multiply-by-10-or-100"><span style={{color:"yellow", fontSize:"30px"}}>1. multiply-by-10-or-100</span></a>
+<a href="https://www.ixl.com/math/grade-4/multiplication-patterns-over-increasing-place-values"><span style={{color:"yellow", fontSize:"30px"}}>2. Multiplication patterns over increasing place values
+</span></a>
+
+
+<br/><br/><br/>
+<span style={{color:"#f542f5", fontSize:"55px"}}>5th grade</span>
+<a href="https://www.ixl.com/math/grade-5/place-value"><span style={{color:"yellow", fontSize:"30px"}}>1. place value</span></a>
+<a href="writing-numbers-in-words-convert-words-to-digits"><span style={{color:"yellow", fontSize:"30px"}}>2. Writing numbers in words: convert words to digits
+</span></a>
+</Slide>
+
+</Deck>
   );
 }
 export default App;
