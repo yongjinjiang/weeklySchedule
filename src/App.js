@@ -121,11 +121,11 @@ function App() {
  </Slide> */}
 
 
- <Slide>
+ {/* <Slide>
 
     <Table />
   
- </Slide>
+ </Slide> */}
 
 
  <Slide>
@@ -145,7 +145,7 @@ function App() {
 <br/><br/><br/>
 <span style={{color:"#f542f5", fontSize:"55px"}}>5th grade</span>
 <a href="https://www.ixl.com/math/grade-5/place-value"><span style={{color:"yellow", fontSize:"30px"}}>1. place value</span></a>
-<a href="writing-numbers-in-words-convert-words-to-digits"><span style={{color:"yellow", fontSize:"30px"}}>2. Writing numbers in words: convert words to digits
+<a href="https://www.ixl.com/math/grade-5/writing-numbers-in-words-convert-words-to-digits"><span style={{color:"yellow", fontSize:"30px"}}>2. Writing numbers in words: convert words to digits
 </span></a>
 </Slide>
 
@@ -153,3 +153,6 @@ function App() {
   );
 }
 export default App;
+
+
+// export Table;

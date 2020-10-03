@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialTable from "material-table";
+
 export const Table = () => {
     const data = [
       { name: "个", name_en: "one", value: 1},
@@ -12,6 +13,9 @@ export const Table = () => {
       { name: "千万", name_en: "ten milliion", value: "10,000,000"},
       { name: "亿", name_en: "hundred million", value: "100,000,000"},
       { name: "十亿", name_en: "billion", value: "1000,000,000"},
+      { name: "十分", name_en: "tenth", value: "0.1"},
+      { name: "百分", name_en: "hundredth", value: "0.01"},
+      { name: "千分", name_en: "thousandth", value: "0.001"},
     ];
   
     const columns = [

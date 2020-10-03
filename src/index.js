@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {Table} from './tablePlaceValue'; 
+import {Schedule} from './WeeklySchedule'; 
 import Game1 from './Game1';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <App /> */}
+    <Schedule title1="4th/5th"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
