@@ -84,74 +84,73 @@ let All_5A_somebody_en=[];
   if (All_5A_en.includes(props.who)){const x = All_5A_en.indexOf(props.who); All_5A_somebody_en.push(props.who);All_5A_somebody.push(All_5A[x])};
     
 
+   console.log("All_4A_somebody_en: ",All_4A_somebody_en, All_4A_somebody)
+
+   console.log("All_4B_somebody_en: ",All_4B_somebody_en, All_4B_somebody)
+
+   console.log("All_5A_somebody_en: ",All_5A_somebody_en, All_5A_somebody)
+
 
     const data = []
     var row1
 
     for(let x in All_4A_somebody){ 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="12:50-1:20";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
-    if (Gauss_4A.includes(All_4A[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
-    if (Euler_4A.includes(All_4A[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
-    if (Newton_4A.includes(All_4A[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
+    if (Gauss_4A.includes(All_4A_somebody[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
+    if (Euler_4A.includes(All_4A_somebody[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
+    if (Newton_4A.includes(All_4A_somebody[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="1:20-1:50";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
-    if (Gauss_4A.includes(All_4A[x])){row1.Tuesday="Gauss(3305jiang)";}
-    if (Euler_4A.includes(All_4A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
-    if (Newton_4A.includes(All_4A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
+    if (Gauss_4A.includes(All_4A_somebody[x])){row1.Tuesday="Gauss(3305jiang)";}
+    if (Euler_4A.includes(All_4A_somebody[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
+    if (Newton_4A.includes(All_4A_somebody[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
      }
 
     for(let x in All_4B_somebody){ 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="2:20-2:50";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
-    if (Gauss_4B.includes(All_4B[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
-    if (Euler_4B.includes(All_4B[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
-    if (Newton_4B.includes(All_4B[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
+    if (Gauss_4B.includes(All_4B_somebody[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
+    if (Euler_4B.includes(All_4B_somebody[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
+    if (Newton_4B.includes(All_4B_somebody[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="2:50-3:20";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
-    if (Gauss_4B.includes(All_4B[x])){row1.Tuesday="Gauss(3305jiang)";}
-    if (Euler_4B.includes(All_4B[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
-    if (Newton_4B.includes(All_4B[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
+    if (Gauss_4B.includes(All_4B_somebody[x])){row1.Tuesday="Gauss(3305jiang)";}
+    if (Euler_4B.includes(All_4B_somebody[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
+    if (Newton_4B.includes(All_4B_somebody[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
          }
 
     for(let x in All_5A_somebody){ 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="10:50-11:20";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Gauss_5A.includes(All_5A[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
-    if (Euler_5A.includes(All_5A[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
-    if (Newton_5A.includes(All_5A[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
+    if (Gauss_5A.includes(All_5A_somebody[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
+    if (Euler_5A.includes(All_5A_somebody[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
+    if (Newton_5A.includes(All_5A_somebody[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Gauss_5A.includes(All_5A[x])){row1.Tuesday="Gauss(3305jiang)";}
-    if (Euler_5A.includes(All_5A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
-    if (Newton_5A.includes(All_5A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
-    data.push(row1);
-
-
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Gauss_5A.includes(All_5A[x])){row1.Tuesday="Gauss(3305jiang)";}
-    if (Euler_5A.includes(All_5A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
-    if (Newton_5A.includes(All_5A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
+    if (Gauss_5A.includes(All_5A_somebody[x])){row1.Tuesday="Gauss(3305jiang)";}
+    if (Euler_5A.includes(All_5A_somebody[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
+    if (Newton_5A.includes(All_5A_somebody[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
 
 
    
     row1=JSON.parse(JSON.stringify(row0));row1.Time="1:50-2:05";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Woods_5A.includes(All_5A_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
-    if (Fire_5A.includes(All_5A_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
-    if (Gold_5A.includes(All_5A_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
-    if (Soil_5A.includes(All_5A_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
-    if (Water_5A.includes(All_5A_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
+    if (Woods_5A.includes(All_5A_somebody_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
+    if (Fire_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
+    if (Gold_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
+    if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
+    if (Water_5A.includes(All_5A_somebody_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
     data.push(row1);
 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="1:30-1:45";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Woods_5A.includes(All_5A_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
-    if (Fire_5A.includes(All_5A_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
-    if (Gold_5A.includes(All_5A_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
-    if (Soil_5A.includes(All_5A_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
-    if (Water_5A.includes(All_5A_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
+    if (Woods_5A.includes(All_5A_somebody_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
+    if (Fire_5A.includes(All_5A_somebody_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
+    if (Gold_5A.includes(All_5A_somebody_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
+    if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
+    if (Water_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
     data.push(row1);
 
         }
