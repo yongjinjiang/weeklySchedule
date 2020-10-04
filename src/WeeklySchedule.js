@@ -43,59 +43,94 @@ const Gold_5A=["Kai DaCruz Carlos","Esther George","Lestat Lor","Tao McCarthy","
 const Fire_5A=["Penny Gulbranson","Odilia Lang","Alex Lundsten","Adam Putz","Sasha Stoick"]
 const row0={Time: "", Name:"",Monday:"", Tuesday:"", Wednesday:"", Thursday:"", Friday:""}
 
+// const ALL=All_5A_en.concat(All_4A_en).concat(All_4B_en);
 
+// const EncodedNames=[]
 
+// for (let x in  ALL) {EncodedNames.push( encodeURIComponent(ALL[x]) )}
+
+// function download(filename, text) {
+//   var element = document.createElement('a');
+//   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+//   element.setAttribute('download', filename);
+
+//   element.style.display = 'none';
+//   document.body.appendChild(element);
+
+//   element.click();
+//   document.body.removeChild(element);
+// }
+
+// // Start file download.
+// download("EncodedNames.txt",JSON.stringify(EncodedNames));
+// download("originalNames.txt",JSON.stringify(EncodedNames));
+
+// const name="Esther George";
+// const EncodedName=encodeURIComponent(name)
 
 
 
 export const Schedule= (props) => {
+let All_4A_somebody=[];
+let All_4B_somebody=[];
+let All_5A_somebody=[];
+
+let All_4A_somebody_en=[];
+let All_4B_somebody_en=[];
+let All_5A_somebody_en=[];
+    
+  if (All_4A_en.includes(props.who)){const x = All_4A_en.indexOf(props.who); All_4A_somebody_en.push(props.who);All_4A_somebody.push(All_4A[x])};
+  if (All_4B_en.includes(props.who)){const x = All_4B_en.indexOf(props.who); All_4B_somebody_en.push(props.who);All_4B_somebody.push(All_4B[x])};
+  if (All_5A_en.includes(props.who)){const x = All_5A_en.indexOf(props.who); All_5A_somebody_en.push(props.who);All_5A_somebody.push(All_5A[x])};
+    
+
 
     const data = []
     var row1
 
-    for(let x in All_4A){ 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="12:50-1:20";row1.Name=All_4A[x]+","+All_4A_en[x]; 
+    for(let x in All_4A_somebody){ 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="12:50-1:20";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
     if (Gauss_4A.includes(All_4A[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
     if (Euler_4A.includes(All_4A[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
     if (Newton_4A.includes(All_4A[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:20-1:50";row1.Name=All_4A[x]+","+All_4A_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:20-1:50";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
     if (Gauss_4A.includes(All_4A[x])){row1.Tuesday="Gauss(3305jiang)";}
     if (Euler_4A.includes(All_4A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
     if (Newton_4A.includes(All_4A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
      }
 
-    for(let x in All_4B){ 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="2:20-2:50";row1.Name=All_4B[x]+","+All_4B_en[x]; 
+    for(let x in All_4B_somebody){ 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="2:20-2:50";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
     if (Gauss_4B.includes(All_4B[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
     if (Euler_4B.includes(All_4B[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
     if (Newton_4B.includes(All_4B[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="2:50-3:20";row1.Name=All_4B[x]+","+All_4B_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="2:50-3:20";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
     if (Gauss_4B.includes(All_4B[x])){row1.Tuesday="Gauss(3305jiang)";}
     if (Euler_4B.includes(All_4B[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
     if (Newton_4B.includes(All_4B[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
          }
 
-    for(let x in All_5A){ 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="10:50-11:20";row1.Name=All_5A[x]+","+All_5A_en[x]; 
+    for(let x in All_5A_somebody){ 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="10:50-11:20";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Gauss_5A.includes(All_5A[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
     if (Euler_5A.includes(All_5A[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
     if (Newton_5A.includes(All_5A[x])){row1.Tuesday="Newton(3305jiang)";row1.Friday="Newton(3305jiang)";row1.Monday="Newton(3305jiang)";}
     data.push(row1);
 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A[x]+","+All_5A_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Gauss_5A.includes(All_5A[x])){row1.Tuesday="Gauss(3305jiang)";}
     if (Euler_5A.includes(All_5A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
     if (Newton_5A.includes(All_5A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
 
 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A[x]+","+All_5A_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Gauss_5A.includes(All_5A[x])){row1.Tuesday="Gauss(3305jiang)";}
     if (Euler_5A.includes(All_5A[x])){row1.Thursday="Euler(3305jiang)";row1.Friday="Euler(3305jiang)";}
     if (Newton_5A.includes(All_5A[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
@@ -103,7 +138,7 @@ export const Schedule= (props) => {
 
 
    
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:50-2:05";row1.Name=All_5A[x]+","+All_5A_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:50-2:05";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Woods_5A.includes(All_5A_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
     if (Fire_5A.includes(All_5A_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
     if (Gold_5A.includes(All_5A_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
@@ -111,7 +146,7 @@ export const Schedule= (props) => {
     if (Water_5A.includes(All_5A_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
     data.push(row1);
 
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:30-1:45";row1.Name=All_5A[x]+","+All_5A_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:30-1:45";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Woods_5A.includes(All_5A_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
     if (Fire_5A.includes(All_5A_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
     if (Gold_5A.includes(All_5A_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
@@ -175,7 +210,12 @@ export const Schedule= (props) => {
   
     return (
        <div className="uniqueName">
-      <MaterialTable title= {props.title1+"'s weekly schedule"} data={data} columns={columns} />
+      <MaterialTable title= {props.who+"'s weekly schedule"} data={data} columns={columns} options={{
+        paging:true,
+        pageSize:6,       // make initial page size
+        emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
+        pageSizeOptions:[6,12,20,50],    // rows selection options
+      }}/>
       </div> 
     );
   };

@@ -7,10 +7,21 @@ import {Schedule} from './WeeklySchedule';
 import Game1 from './Game1';
 import * as serviceWorker from './serviceWorker';
 
+var who="";
+  
+if (document.location.search!==null){
+  let searchParams = new URLSearchParams(document.location.search);
+
+  if (searchParams.has("who")){
+ who=searchParams.get("who");
+   }
+  }
+
+
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Schedule title1="4th/5th"/>
+    <Schedule who={who}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
