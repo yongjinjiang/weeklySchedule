@@ -21,7 +21,7 @@ if (document.location.search!==null){
 ReactDOM.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Schedule who={who}/>
+    <Schedule who="Finn Foster"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
