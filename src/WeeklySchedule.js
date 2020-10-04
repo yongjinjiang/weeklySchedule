@@ -108,7 +108,7 @@ export const Schedule= (props) => {
     if (Fire_5A.includes(All_5A_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
     if (Gold_5A.includes(All_5A_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
     if (Soil_5A.includes(All_5A_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
-    if (Water_5A.includes(All_5A_en[x])){row1.Thursdy="Water(jmjiang1chinese)";}
+    if (Water_5A.includes(All_5A_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
     data.push(row1);
 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="1:30-1:45";row1.Name=All_5A[x]+","+All_5A_en[x]; 
