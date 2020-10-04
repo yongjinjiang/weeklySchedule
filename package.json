@@ -1,6 +1,6 @@
 {
   "name": "mathslides",
-  "homepage": "https://yongjinjiang.github.io/mathslides",
+  "homepage":"https://yongjinjiang.github.io/weeklySchedule",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
