@@ -1,66 +1,16 @@
 import React from 'react';
 import MaterialTable from "material-table";
 
-
-const Gauss_4A=["石以成","雷润宁","何高楠","寇可思","闵木兰","马海为"]
-const Gauss_4A_en=["Jonah Stapleton","Ronin Rademacher","Sophie Obeng","Keisa Kopietz","Mulan Addy","Victor Moua"]
-const Euler_4A=["史凯蒂","陆凯","毛美茜","石庆路","戴玲","陈萌臻","杨达"]
-const Euler_4A_en=["Camille Ayers","Kai Lewis","Maisy Mau","Keilo Smith","Mackenzie Davis","Kelly Chen","Dag Young"]
-const Newton_4A=["温婉婷","吴若莎","任秋铭","欧乔恩","米思娜","杰伦","欧贝莎","潘如艺"]
-const Newton_4A_en=["Vivian Wenzel","Rosie Wachman","Azrael Rexius","Chelsea Ochocki","Signe Miller","Jaelon Larson-Adams","Betsaida Morales Omana","Ruby Pruesse"]
-const All_4A=Gauss_4A.concat(Euler_4A).concat(Newton_4A)
-const All_4A_en=Gauss_4A_en.concat(Euler_4A_en).concat(Newton_4A_en)
-
-// console.log("all students 0f 4A",All_4A)
-
-const Gauss_4B=["马永科","思同","万志恒","罗爱乐","黄美枚","马承凯"]
-const Gauss_4B_en=["Atticus Matthes","Easton Schneider","Bryduk Wickham","Ella Roselius","Mei Wong","Benny Maanum"]
-const Euler_4B=["孙慧莲","何亦凯","孙狄伦","莫凯星","榆兆岗","林莉媛","黄诗如"]
-const Euler_4B_en=["Solvig Wilson","Isaak Wilson","Dylan Schaefer","Abby Moore","Sammy Schumann","Li Yuan (Lily) Lin","Caitlin (Joy Joy) Huang"]
-const Newton_4B=["柏甜雅","曹芸菲","梅天佑","刘笙","赵志明","高仁迪","邓敏开"]
-const Newton_4B_en=["Thea Berg","Elicia Thao","Leo Merethith","Seng Nhkum","Riley Eppelheimer","Tiago Cuadro Labey","MyKa’el Koumalasy-Dent"]
-const All_4B=Gauss_4B.concat(Euler_4B).concat(Newton_4B)
-const All_4B_en=Gauss_4B_en.concat(Euler_4B_en).concat(Newton_4B_en)
-
-const Gauss_5A=["孔美希","梁睿天","周乐陶","聂璐珍","范玮杰","王学琳","宋广宇","艾文","苏家恩"]
-const Gauss_5A_en=["Miriam Kelly", "Odilia Lang","Tao McCarthy","Genevieve Menchaca Gorton",
-            "Rayne Pham","Jolene Wang","Alex Lundsten","Lucian Espinosa-Splichal","Elena Soo"]
-
-const Euler_5A=["葛荟婕","何曼琳","宋文丽","宋明铭","冯苏玉","陈亚当","乔爱","高美希","马哲昊"]
-const Euler_5A_en=["Penny Gulbranson","Katherine Horton","Gwen Thayer","Miles Thayer"
-                ,"Suzume Usada-Fagerland","Adam Putz","Esther George","Eva Granser","Xavier Markowitz Mulet"]
-const Newton_5A=["代凯","田一帆","史夏天","罗可文","张忆娜","宋荣华","莫逸思","范卓飞","刘大伟"]
-const Newton_5A_en=["Kai DaCruz Carlos","Finn Foster","Sasha Stoick","Lestat Lor","Nataniella Zedekia","Maya Song","Amaris Moos","Mack Phillips","David Nhkum"]
-
-const All_5A=Gauss_5A.concat(Euler_5A).concat(Newton_5A)
-const All_5A_en=Gauss_5A_en.concat(Euler_5A_en).concat(Newton_5A_en)
-
-
-const Woods_5A=["Lucian Espinosa-Splichal","Finn Foster","Xavier Markowitz Mulet","Maya Song","Elena Soo"];
-const Water_5A=["Eva Granser","Miriam Kelly","Mack Phillips","Miles Thayer","Jolene Wang"];
-const Soil_5A=["Katherine Horton","Genevieve Menchaca Gorton","Amaris Moos","David Nhkum","Rayne Pham","Gwen Thayer"]
-const Gold_5A=["Kai DaCruz Carlos","Esther George","Lestat Lor","Tao McCarthy","Suzume Usada-Fagerland","Nataniella Zedekia"]
-const Fire_5A=["Penny Gulbranson","Odilia Lang","Alex Lundsten","Adam Putz","Sasha Stoick",]
-
-
-const Red_5A=["Mack Phillips","Jolene Wang","Miriam Kelly","Alex Lundsten"];
-const Blue_5A=["Lestat Lor","Rayne Pham","Suzume Usada-Fagerland","Lucian Espinosa-Splichal","Nataniella Zedekia"]
-const Green_5A=["Xavier Markowitz Mulet","Kai DaCruz Carlos","David Nhkum","Esther George","Adam Putz","Sasha Stoick"]
-const Yellow_5A=["Penny Gulbranson","Maya Song","Genevieve Menchaca Gorton","Katherine Horton"]
-const Orange_5A=["Odilia Lang","Finn Foster","Tao McCarthy","Amaris Moos","Gwen Thayer","Miles Thayer","Eva Granser","Elena Soo"]
-
-const Red_4A=["Jonah Stapleton","Camille Ayers","Ronin Rademacher","Dag Young","Maisy Mau"];
-const Blue_4A=["Kai Lewis","Ruby Pruesse","Rosie Wachman","Victor Moua","Kelly Chen"]
-const Green_4A=["Vivian Wenzel","Betsaida Morales Omana","Chelsea Ochocki","Mulan Addy","Azrael Rexius"]
-const Yellow_4A=["Signe Miller","Keisa Kopietz","Sophie Obeng","Keilo Smith","Mackenzie Davis"]
-const Orange_4A=[]
-
-
-const Red_4B=["Li Yuan (Lily) Lin","Elicia Thao","Seng Nhkum","Mei Wong","Ella Roselius"];
-const Blue_4B=["Isaak Wilson","Solvig Wilson","Atticus Matthes","Benny Maanum","MyKa’el Koumalasy-Dent"]
-const Green_4B=["Bryduk Wickham","Sammy Schumann","Leo Merethith","Dylan Schaefer","Thea Berg"]
-const Yellow_4B=["Abby Moore","Riley Eppelheimer","Tiago Cuadro Labey","Caitlin (Joy Joy) Huang","Easton Schneider"]
-const Orange_4B=[]
+import {
+  Gauss_4A, Gauss_4B, Gauss_5A,Gauss_4A_en, Gauss_4B_en, Gauss_5A_en,
+  Euler_4A, Euler_4B, Euler_5A,Euler_4A_en, Euler_4B_en, Euler_5A_en,
+  Newton_4A, Newton_4B, Newton_5A,Newton_4A_en, Newton_4B_en, Newton_5A_en,
+  All_4A, All_4A_en,All_4B, All_4B_en,All_5A, All_5A_en,
+  Woods_5A, Water_5A, Soil_5A, Gold_5A, Fire_5A,
+  Red_5A,Blue_5A,Green_5A,Yellow_5A,Orange_5A,
+  Red_4A,Blue_4A,Green_4A,Yellow_4A,Orange_4A,
+  Red_4B,Blue_4B,Green_4B,Yellow_4B,Orange_4B
+} from "./studentsGroups"
 
 
 const row0={Time: "", Name:"",Monday:"", Tuesday:"", Wednesday:"", Thursday:"", Friday:""}
