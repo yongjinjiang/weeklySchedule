@@ -40,8 +40,22 @@ const Woods_5A=["Lucian Espinosa-Splichal","Finn Foster","Xavier Markowitz Mulet
 const Water_5A=["Eva Granser","Miriam Kelly","Mack Phillips","Miles Thayer","Jolene Wang"];
 const Soil_5A=["Katherine Horton","Genevieve Menchaca Gorton","Amaris Moos","David Nhkum","Rayne Pham","Gwen Thayer"]
 const Gold_5A=["Kai DaCruz Carlos","Esther George","Lestat Lor","Tao McCarthy","Suzume Usada-Fagerland","Nataniella Zedekia"]
-const Fire_5A=["Penny Gulbranson","Odilia Lang","Alex Lundsten","Adam Putz","Sasha Stoick"]
+const Fire_5A=["Penny Gulbranson","Odilia Lang","Alex Lundsten","Adam Putz","Sasha Stoick",]
+
+
+const Red_5A=["Mack Phillips","Jolene Wang","Miriam Kelly","Alex Lundsten"];
+const Blue_5A=["Lestat Lor","Rayne Pham","Suzume Usada-Fagerland","Lucian Espinosa-Splichal","Nataniella Zedekia"]
+const Green_5A=["Xavier Markowitz Mulet","Kai DaCruz Carlos","David Nhkum","Esther George","Adam Putz","Sasha Stoick"]
+const Yellow_5A=["Penny Gulbranson","Maya Song","Genevieve Menchaca Gorton","Katherine Horton"]
+const Orange_5A=["Odilia Lang","Finn Foster","Tao McCarthy","Amaris Moos","Gwen Thayer","Miles Thayer","Eva Granser","Elena Soo"]
+
+
+
 const row0={Time: "", Name:"",Monday:"", Tuesday:"", Wednesday:"", Thursday:"", Friday:""}
+
+
+
+
 
 // const ALL=All_5A_en.concat(All_4A_en).concat(All_4B_en);
 
@@ -152,6 +166,18 @@ let All_5A_somebody_en=[];
     if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
     if (Water_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
     data.push(row1);
+
+
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="2:45-3:05";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    if (Red_5A.includes(All_5A_somebody_en[x])){row1.Monday="Red(jmhvidhyld)";row1.Wednesday="Red(jmhvidhyld)";}
+    if (Blue_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Blue(jmhvidhyld)";row1.Thursday="Blue(jmhvidhyld)";}
+    if (Orange_5A.includes(All_5A_somebody_en[x])){row1.Friday="Orange(jmhvidhyld)";}
+    if(row1.Monday||row1.Tuesday||row1.Wednesday||row1.Thursday||row1.Friday) {data.push(row1)};
+
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="3:10-3:30";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    if (Green_5A.includes(All_5A_somebody_en[x])){row1.Monday="Green(jmhvidhyld)";row1.Wednesday="Green(jmhvidhyld)";}
+    if (Yellow_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Yellow(jmhvidhyld)";row1.Thursday="Yellow(jmhvidhyld)";}
+    if(row1.Monday||row1.Tuesday||row1.Wednesday||row1.Thursday||row1.Friday) {data.push(row1)};
 
         }
          
