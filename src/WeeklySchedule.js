@@ -51,8 +51,8 @@ const Orange_5A=["Odilia Lang","Finn Foster","Tao McCarthy","Amaris Moos","Gwen 
 
 const Red_4A=["Jonah Stapleton","Camille Ayers","Ronin Rademacher","Dag Young","Maisy Mau"];
 const Blue_4A=["Kai Lewis","Ruby Pruesse","Rosie Wachman","Victor Moua","Kelly Chen"]
-const Green_4A=["Vivian Wenzel","Betsaida Morales Omana","Mulan Addy","Azrael Rexius"]
-const Yellow_4A=["Signe Miller","Keisa Kopietz","Sophie Obeng","Keisa Kopietz","Mackenzie Davis"]
+const Green_4A=["Vivian Wenzel","Betsaida Morales Omana","Chelsea Ochocki","Mulan Addy","Azrael Rexius"]
+const Yellow_4A=["Signe Miller","Keisa Kopietz","Sophie Obeng","Keilo Smith","Mackenzie Davis"]
 const Orange_4A=[]
 
 
