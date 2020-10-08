@@ -1,6 +1,5 @@
 import React from 'react';
 import MaterialTable from "material-table";
-
 import {
   Gauss_4A, Gauss_4B, Gauss_5A,Gauss_4A_en, Gauss_4B_en, Gauss_5A_en,
   Euler_4A, Euler_4B, Euler_5A,Euler_4A_en, Euler_4B_en, Euler_5A_en,
@@ -17,7 +16,8 @@ import {
 
 const row0={Time: "", Name:"",Monday:"", Tuesday:"", Wednesday:"", Thursday:"", Friday:""}
 
-
+// const { useState } = React;
+// const [selectedRow, setSelectedRow] = useState(null);
 
 
 
@@ -235,6 +235,14 @@ var zwName="";
       {
         title: "Time",
         field: "Time",
+        cellStyle: {
+          backgroundColor: '#039be5',
+          color: '#FFF'
+        },  
+        headerStyle: {
+          backgroundColor: '#039be5',
+          color: '#FFF'
+        }
       },
       // {
       //   title: "Name",
@@ -264,7 +272,13 @@ var zwName="";
   
     return (
        <div className="uniqueName">
-      <MaterialTable title= {props.who+"("+zwName+")'s weekly schedule"} data={data} columns={columns} options={{
+      <MaterialTable title= {props.who+"("+zwName+")'s weekly schedule"} data={data} columns={columns}    options={{headerStyle: {
+          backgroundColor: '#01579b',
+          color: '#FFF'
+        },
+        // rowStyle: rowData => ({
+        //   backgroundColor: (selectedRow === rowData.tableData.id) ? '#EEE' : '#FFF'
+        // }),
         paging:true,
         pageSize:6,       // make initial page size
         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
