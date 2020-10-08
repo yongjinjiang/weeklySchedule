@@ -54,10 +54,10 @@ let All_5A_somebody=[];
 let All_4A_somebody_en=[];
 let All_4B_somebody_en=[];
 let All_5A_somebody_en=[];
-    
-  if (All_4A_en.includes(props.who)){const x = All_4A_en.indexOf(props.who); All_4A_somebody_en.push(props.who);All_4A_somebody.push(All_4A[x])};
-  if (All_4B_en.includes(props.who)){const x = All_4B_en.indexOf(props.who); All_4B_somebody_en.push(props.who);All_4B_somebody.push(All_4B[x])};
-  if (All_5A_en.includes(props.who)){const x = All_5A_en.indexOf(props.who); All_5A_somebody_en.push(props.who);All_5A_somebody.push(All_5A[x])};
+var zwName="";  
+  if (All_4A_en.includes(props.who)){const x = All_4A_en.indexOf(props.who); All_4A_somebody_en.push(props.who);All_4A_somebody.push(All_4A[x]);zwName=All_4A[x]};
+  if (All_4B_en.includes(props.who)){const x = All_4B_en.indexOf(props.who); All_4B_somebody_en.push(props.who);All_4B_somebody.push(All_4B[x]);zwName=All_4B[x]};
+  if (All_5A_en.includes(props.who)){const x = All_5A_en.indexOf(props.who); All_5A_somebody_en.push(props.who);All_5A_somebody.push(All_5A[x]);zwName=All_5A[x]};
     
 
    console.log("All_4A_somebody_en: ",All_4A_somebody_en, All_4A_somebody)
@@ -139,22 +139,21 @@ let All_5A_somebody_en=[];
     if (Newton_5A.includes(All_5A_somebody[x])){row1.Monday="Newton(3305jiang)";row1.Wednesday="Newton(3305jiang)";}
     data.push(row1);
 
-
-   
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:50-2:05";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    if (Woods_5A.includes(All_5A_somebody_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
-    if (Fire_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
-    if (Gold_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
-    if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
-    if (Water_5A.includes(All_5A_somebody_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
-    data.push(row1);
-
-    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:30-1:45";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:20-1:40";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Woods_5A.includes(All_5A_somebody_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
     if (Fire_5A.includes(All_5A_somebody_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
     if (Gold_5A.includes(All_5A_somebody_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
     if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
     if (Water_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
+    data.push(row1);
+
+
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="1:40-2:00";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    if (Woods_5A.includes(All_5A_somebody_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
+    if (Fire_5A.includes(All_5A_somebody_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
+    if (Gold_5A.includes(All_5A_somebody_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
+    if (Soil_5A.includes(All_5A_somebody_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
+    if (Water_5A.includes(All_5A_somebody_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
     data.push(row1);
 
 
@@ -197,10 +196,10 @@ let All_5A_somebody_en=[];
         title: "Time",
         field: "Time",
       },
-      {
-        title: "Name",
-        field: "Name",
-      },
+      // {
+      //   title: "Name",
+      //   field: "Name",
+      // },
       {
         title: "Monday",
         field: "Monday",
@@ -225,7 +224,7 @@ let All_5A_somebody_en=[];
   
     return (
        <div className="uniqueName">
-      <MaterialTable title= {props.who+"'s weekly schedule"} data={data} columns={columns} options={{
+      <MaterialTable title= {props.who+"("+zwName+")'s weekly schedule"} data={data} columns={columns} options={{
         paging:true,
         pageSize:6,       // make initial page size
         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
