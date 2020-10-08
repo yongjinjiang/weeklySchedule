@@ -7,6 +7,8 @@ import {
   Newton_4A, Newton_4B, Newton_5A,Newton_4A_en, Newton_4B_en, Newton_5A_en,
   All_4A, All_4A_en,All_4B, All_4B_en,All_5A, All_5A_en,
   Woods_5A, Water_5A, Soil_5A, Gold_5A, Fire_5A,
+  Woods_4A, Water_4A, Soil_4A, Gold_4A, Fire_4A,
+  Woods_4B, Water_4B, Soil_4B, Gold_4B, Fire_4B,
   Red_5A,Blue_5A,Green_5A,Yellow_5A,Orange_5A,
   Red_4A,Blue_4A,Green_4A,Yellow_4A,Orange_4A,
   Red_4B,Blue_4B,Green_4B,Yellow_4B,Orange_4B
@@ -96,9 +98,47 @@ var zwName="";
     data.push(row1);
 
 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="3:00-3:20";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
+    if (Woods_4A.includes(All_4A_somebody_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
+    if (Fire_4A.includes(All_4A_somebody_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
+    if (Gold_4A.includes(All_4A_somebody_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
+    if (Soil_4A.includes(All_4A_somebody_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
+    if (Water_4A.includes(All_4A_somebody_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
+    data.push(row1);
+
+
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="3:20-3:40";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
+    if (Woods_4A.includes(All_4A_somebody_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
+    if (Fire_4A.includes(All_4A_somebody_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
+    if (Gold_4A.includes(All_4A_somebody_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
+    if (Soil_4A.includes(All_4A_somebody_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
+    if (Water_4A.includes(All_4A_somebody_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
+    data.push(row1);
+
+
      }
 
     for(let x in All_4B_somebody){ 
+      row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:40";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
+      if (Woods_4B.includes(All_4B_somebody_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
+      if (Fire_4B.includes(All_4B_somebody_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
+      if (Gold_4B.includes(All_4B_somebody_en[x])){row1.Monday="Gold(jmjiang1chinese)";}
+      if (Soil_4B.includes(All_4B_somebody_en[x])){row1.Wednesday="Soil(jmjiang1chinese)";}  
+      if (Water_4B.includes(All_4B_somebody_en[x])){row1.Tuesday="Water(jmjiang1chinese)";}  
+      data.push(row1);
+  
+  
+      row1=JSON.parse(JSON.stringify(row0));row1.Time="11:40-12:00";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
+      if (Woods_4B.includes(All_4B_somebody_en[x])){row1.Monday="Wood(jmjiang1chinese)";}
+      if (Fire_4B.includes(All_4B_somebody_en[x])){row1.Tuesday="Fire(jmjiang1chinese)";}
+      if (Gold_4B.includes(All_4B_somebody_en[x])){row1.Wednesday="Gold(jmjiang1chinese)";}
+      if (Soil_4B.includes(All_4B_somebody_en[x])){row1.Friday="Soil(jmjiang1chinese)";}
+      if (Water_4B.includes(All_4B_somebody_en[x])){row1.Thursday="Water(jmjiang1chinese)";}
+      data.push(row1);
+
+
+
+
 
       row1=JSON.parse(JSON.stringify(row0));row1.Time="1:05-1:25";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
       if (Red_4B.includes(All_4B_somebody_en[x])){row1.Monday="Red(jmhvidhyld)";row1.Wednesday="Red(jmhvidhyld)";}
