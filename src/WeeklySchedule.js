@@ -1,5 +1,6 @@
 import React from 'react';
 import MaterialTable from "material-table";
+import { createMuiTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import {
   Gauss_4A, Gauss_4B, Gauss_5A,Gauss_4A_en, Gauss_4B_en, Gauss_5A_en,
   Euler_4A, Euler_4B, Euler_5A,Euler_4A_en, Euler_4B_en, Euler_5A_en,
@@ -270,20 +271,46 @@ var zwName="";
       }
     ];
   
+
+    const theme = createMuiTheme({
+      overrides: {
+        MuiTypography: {
+          h6: {
+            fontWeight: 'bolder !important',
+            color: "#f542b9",
+          },
+        },
+      },
+    });
+
     return (
        <div className="uniqueName">
+
+   <ThemeProvider theme={theme}>
       <MaterialTable title= {props.who+"("+zwName+")'s weekly schedule"} data={data} columns={columns}    options={{headerStyle: {
           backgroundColor: '#01579b',
           color: '#FFF'
         },
+        rowStyle: {
+          backgroundColor: '#EEE'},
         // rowStyle: rowData => ({
         //   backgroundColor: (selectedRow === rowData.tableData.id) ? '#EEE' : '#FFF'
         // }),
+        rowStyle: rowData => {
+          if(rowData.Monday.includes("3305jiang")||rowData.Tuesday.includes("3305jiang")||rowData.Wednesday.includes("3305jiang") ) {
+            return {backgroundColor: 'yellow'}};
+          if(rowData.Monday.includes("jmjiang1chinese")||rowData.Tuesday.includes("jmjiang1chinese")||rowData.Wednesday.includes("jmjiang1chinese") ||rowData.Thursday.includes("jmjiang1chinese")||rowData.Friday.includes("jmjiang1chinese")) {
+              return {backgroundColor: '#45f542'}};
+              if(rowData.Monday.includes("jmhvidhyld")||rowData.Tuesday.includes("jmhvidhyld")||rowData.Wednesday.includes("jmhvidhyld") ||rowData.Thursday.includes("jmhvidhyld")||rowData.Friday.includes("jmhvidhyld")) {
+                return {backgroundColor: '#eb36ae'}};
+            
+        },
         paging:true,
         pageSize:6,       // make initial page size
         emptyRowsWhenPaging: true,   //to make page size fix in case of less data rows
         pageSizeOptions:[6,12,20,50],    // rows selection options
       }}/>
+      </ThemeProvider>
       </div> 
     );
   };
