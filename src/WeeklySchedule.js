@@ -168,6 +168,11 @@ var zwName="";
          }
 
     for(let x in All_5A_somebody){ 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    row1.Monday="Prep-Gym(jmgym)"; row1.Wednesday="prep-Gym(jmgym)"; 
+   
+    data.push(row1);
+
     row1=JSON.parse(JSON.stringify(row0));row1.Time="10:50-11:20";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
     if (Gauss_5A.includes(All_5A_somebody[x])){row1.Thursday="Gauss(3305jiang)";row1.Monday="Gauss(3305jiang)";}
     if (Euler_5A.includes(All_5A_somebody[x])){row1.Wednesday="Euler(3305jiang)";row1.Monday="Euler(3305jiang)";}
@@ -297,12 +302,14 @@ var zwName="";
         //   backgroundColor: (selectedRow === rowData.tableData.id) ? '#EEE' : '#FFF'
         // }),
         rowStyle: rowData => {
-          if(rowData.Monday.includes("3305jiang")||rowData.Tuesday.includes("3305jiang")||rowData.Wednesday.includes("3305jiang") ) {
+          if(rowData.Monday.includes("3305jiang")||rowData.Tuesday.includes("3305jiang")||rowData.Wednesday.includes("3305jiang")||rowData.Friday.includes("3305jiang") ||rowData.Thursday.includes("3305jiang") ) {
             return {backgroundColor: 'yellow'}};
           if(rowData.Monday.includes("jmjiang1chinese")||rowData.Tuesday.includes("jmjiang1chinese")||rowData.Wednesday.includes("jmjiang1chinese") ||rowData.Thursday.includes("jmjiang1chinese")||rowData.Friday.includes("jmjiang1chinese")) {
               return {backgroundColor: '#45f542'}};
-              if(rowData.Monday.includes("jmhvidhyld")||rowData.Tuesday.includes("jmhvidhyld")||rowData.Wednesday.includes("jmhvidhyld") ||rowData.Thursday.includes("jmhvidhyld")||rowData.Friday.includes("jmhvidhyld")) {
+          if(rowData.Monday.includes("jmhvidhyld")||rowData.Tuesday.includes("jmhvidhyld")||rowData.Wednesday.includes("jmhvidhyld") ||rowData.Thursday.includes("jmhvidhyld")||rowData.Friday.includes("jmhvidhyld")) {
                 return {backgroundColor: '#eb36ae'}};
+          if(rowData.Monday.includes("prep")||rowData.Tuesday.includes("prep")||rowData.Wednesday.includes("prep") ||rowData.Thursday.includes("prep")||rowData.Friday.includes("prep")) {
+                  return {backgroundColor: '#fcba03'}};
             
         },
         paging:true,
