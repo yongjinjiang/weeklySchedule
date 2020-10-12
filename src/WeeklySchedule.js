@@ -126,7 +126,7 @@ var zwName="";
     for(let x in All_4B_somebody){ 
 
       row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    row1.Monday="Prep-Sci(jmsci)"; row1.Wednesday="prep-Gym(jmsci)"; 
+    row1.Monday="Prep-Sci(jmsci)"; row1.Wednesday="prep-Sci(jmsci)"; 
    
     data.push(row1);
 
