@@ -74,6 +74,10 @@ var zwName="";
     var row1
 
     for(let x in All_4A_somebody){ 
+      row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    row1.Monday="Prep-Art(jmart)"; row1.Wednesday="prep-Art(jmart)"; 
+   
+    data.push(row1);
 
       row1=JSON.parse(JSON.stringify(row0));row1.Time="11:05-11:25";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
       if (Red_4A.includes(All_4A_somebody_en[x])){row1.Monday="Red(jmhvidhyld)";row1.Wednesday="Red(jmhvidhyld)";}
@@ -120,6 +124,12 @@ var zwName="";
      }
 
     for(let x in All_4B_somebody){ 
+
+      row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
+    row1.Monday="Prep-Sci(jmsci)"; row1.Wednesday="prep-Gym(jmsci)"; 
+   
+    data.push(row1);
+
       row1=JSON.parse(JSON.stringify(row0));row1.Time="11:20-11:40";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
       if (Woods_4B.includes(All_4B_somebody_en[x])){row1.Thursday="Wood(jmjiang1chinese)";} 
       if (Fire_4B.includes(All_4B_somebody_en[x])){row1.Friday="Fire(jmjiang1chinese)";} 
