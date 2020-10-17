@@ -1,21 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import {Table} from './tablePlaceValue'; 
+// import App from './App';
+// import {Table} from './tablePlaceValue'; 
 import {Schedule} from './WeeklySchedule'; 
-import Game1 from './Game1';
+// import Game1 from './Game1';
 import * as serviceWorker from './serviceWorker';
 
 var who="";
   
-if (document.location.search!==null){
-  let searchParams = new URLSearchParams(document.location.search);
+// console.log("document.location",document.location.href)
+// console.log("document.location",document.location.href.split("who=")[1])
 
-  if (searchParams.has("who")){
- who=searchParams.get("who");
-   }
-  }
+who=document.location.href.split("who=")[1];
+let searchParams = new URLSearchParams("?who="+who);
+who=searchParams.get("who")
+console.log("who=",who)
+
+// if (document.location.search!==null){
+//   let searchParams = new URLSearchParams(document.location.search);
+
+//   if (searchParams.has("who")){
+//  who=searchParams.get("who");
+//  console.log("who=",who)
+//    }
+//   }
 
 
 ReactDOM.render(
