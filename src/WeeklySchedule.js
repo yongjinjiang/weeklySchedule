@@ -74,8 +74,8 @@ var zwName="";
     var row1
 
     for(let x in All_4A_somebody){ 
-      row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    row1.Monday="Prep-Art(jmart)"; row1.Wednesday="prep-Art(jmart)"; 
+    row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_4A_somebody[x]+","+All_4A_somebody_en[x]; 
+    row1.Monday="Prep-Gym(jmgym)"; row1.Wednesday="prep-Gym(jmgym)"; 
    
     data.push(row1);
 
@@ -125,8 +125,8 @@ var zwName="";
 
     for(let x in All_4B_somebody){ 
 
-      row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    row1.Monday="Prep-Sci(jmsci)"; row1.Wednesday="prep-Sci(jmsci)"; 
+      row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_4B_somebody[x]+","+All_4B_somebody_en[x]; 
+      row1.Monday="Prep-Art(jmart)"; row1.Wednesday="prep-Art(jmart)"; 
    
     data.push(row1);
 
@@ -179,7 +179,7 @@ var zwName="";
 
     for(let x in All_5A_somebody){ 
     row1=JSON.parse(JSON.stringify(row0));row1.Time="10:00-10:50";row1.Name=All_5A_somebody[x]+","+All_5A_somebody_en[x]; 
-    row1.Monday="Prep-Gym(jmgym)"; row1.Wednesday="prep-Gym(jmgym)"; 
+    row1.Monday="Prep-Sci(jmsci)"; row1.Wednesday="prep-Sci(jmsci)"; 
    
     data.push(row1);
 
